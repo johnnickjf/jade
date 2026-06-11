@@ -1,0 +1,74 @@
+[
+  {
+    "url": "./Images/pedidonamoro.jpg",
+    "gradient": "linear-gradient(135deg,#2d1b2e,#6a2050)",
+    "emoji": "🌸",
+    "tag": "momentos",
+    "description": "Aquele dia que não tem como esquecer",
+    "aspect": "4/3"
+  },
+  {
+    "url": "./Images/praiajuntos.jpg",
+    "gradient": "linear-gradient(135deg,#1b2535,#1a3a6a)",
+    "emoji": "🌊",
+    "tag": "viagens",
+    "description": "O mar estava perfeito — como você",
+    "aspect": "3/4"
+  },
+  {
+    "url": "./Images/domingoelar.jpg",
+    "gradient": "linear-gradient(135deg,#2e1b1b,#6a2020)",
+    "emoji": "☕",
+    "tag": "cotidiano",
+    "description": "Com você até o mais simples vira especial",
+    "aspect": "1/1"
+  },
+  {
+    "url": "./Images/noparque.jpg",
+    "gradient": "linear-gradient(135deg,#1b2e1b,#206a20)",
+    "emoji": "🌿",
+    "tag": "viagens",
+    "description": "A natureza fica mais bonita com você nela",
+    "aspect": "4/3"
+  },
+  {
+    "url": "./Images/viagem.jpg",
+    "gradient": "linear-gradient(135deg,#2e2620,#6a4520)",
+    "emoji": "🌅",
+    "tag": "momentos",
+    "description": "Com você tudo fica mais bonito de ver",
+    "aspect": "16/9"
+  },
+  {
+    "url": "./Images/jadeastra1.jpg",
+    "gradient": "linear-gradient(135deg,#20202e,#20206a)",
+    "emoji": "✨",
+    "tag": "momentos",
+    "description": "Tem magia em tudo que você faz",
+    "aspect": "3/4"
+  },
+  {
+    "url": "./Images/juntosemcasa.jpg",
+    "gradient": "linear-gradient(135deg,#2e1b25,#6a2045)",
+    "emoji": "🍃",
+    "tag": "cotidiano",
+    "description": "Dias simples contigo são os mais ricos",
+    "aspect": "4/3"
+  },
+  {
+    "url": "./Images/felizesufjf.jpg",
+    "gradient": "linear-gradient(135deg,#1b2e2a,#206a5a)",
+    "emoji": "🌙",
+    "tag": "momentos",
+    "description": "Cada momento contigo é pra guardar",
+    "aspect": "1/1"
+  },
+  {
+    "url": "./Images/nostreinando.jpg",
+    "gradient": "linear-gradient(135deg,#2b2e1b,#5a6a20)",
+    "emoji": "🎶",
+    "tag": "cotidiano",
+    "description": "Com você até a rotina tem ritmo",
+    "aspect": "4/3"
+  }
+]

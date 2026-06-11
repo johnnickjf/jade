@@ -1,0 +1,50 @@
+[
+  {
+    "title": "Perfect",
+    "artist": "Ed Sheeran",
+    "tag": "nossa música",
+    "desc": "Toda vez que toca, eu penso em você e sorrio sozinho.",
+    "videoId": "2Vv-BfVoq4g",
+    "thumb": "https://img.youtube.com/vi/2Vv-BfVoq4g/mqdefault.jpg"
+  },
+  {
+    "title": "Die With A Smile",
+    "artist": "Lady Gaga & Bruno Mars",
+    "tag": "pra ouvir junto",
+    "desc": "Essa música tem o nosso jeito. Dramática e linda ao mesmo tempo.",
+    "videoId": "kPa7bsKwL-c",
+    "thumb": "https://img.youtube.com/vi/kPa7bsKwL-c/mqdefault.jpg"
+  },
+  {
+    "title": "Lover",
+    "artist": "Taylor Swift",
+    "tag": "sentimento",
+    "desc": "Queria ter escrito essa letra. Mas ela capturou tudo que eu sinto.",
+    "videoId": "AzAfcnMm6yQ",
+    "thumb": "https://img.youtube.com/vi/AzAfcnMm6yQ/mqdefault.jpg"
+  },
+  {
+    "title": "Bloom",
+    "artist": "The Paper Kites",
+    "tag": "calma",
+    "desc": "Essa música tem o cheiro dos nossos momentos quietos juntos.",
+    "videoId": "PNf7HFnmDlY",
+    "thumb": "https://img.youtube.com/vi/PNf7HFnmDlY/mqdefault.jpg"
+  },
+  {
+    "title": "You Are The Best Thing",
+    "artist": "Ray LaMontagne",
+    "tag": "verdade",
+    "desc": "Simples assim: você é a melhor coisa.",
+    "videoId": "iBDsTHkaLkU",
+    "thumb": "https://img.youtube.com/vi/iBDsTHkaLkU/mqdefault.jpg"
+  },
+  {
+    "title": "Make You Feel My Love",
+    "artist": "Adele",
+    "tag": "promessa",
+    "desc": "Cada verso aqui é uma promessa que faço a você todo dia.",
+    "videoId": "0put0_a--Ng",
+    "thumb": "https://img.youtube.com/vi/0put0_a--Ng/mqdefault.jpg"
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "date": "O começo",
+    "title": "Quando tudo começou",
+    "text": "Ainda me lembro da primeira vez que percebi que você era diferente. Havia algo no jeito que você falava, que você ria, que fazia tudo ao redor parecer mais leve. Foi ali que começou.",
+    "emoji": "🌱",
+    "gradient": "linear-gradient(135deg,#1b2d2e,#1a3a4a)",
+    "url": "./Images/comeco.jpg"
+  },
+  {
+    "date": "O primeiro passo",
+    "title": "Quando a gente decidiu",
+    "text": "Tinha um nervosismo bom no ar. O tipo que só existe quando algo muito importante está prestes a acontecer. E aconteceu. E foi lindo.",
+    "emoji": "💫",
+    "gradient": "linear-gradient(135deg,#2d1b2e,#4a2040)",
+    "url": "./Images/pedidonamoro.jpg"
+  },
+  {
+    "date": "Descobrindo um ao outro",
+    "title": "Os primeiros momentos nossos",
+    "text": "Cada conversa revelava uma camada nova. Eu fui percebendo, pouco a pouco, que queria continuar ouvindo tudo — e que esse querer não dava sinal de parar.",
+    "emoji": "🔍",
+    "gradient": "linear-gradient(135deg,#2e2320,#4a3020)",
+    "url": "./Images/encontroantigo.jpg"
+  },
+  {
+    "date": "Quando soube de verdade",
+    "title": "O momento em que certeza virou amor",
+    "text": "Não foi um evento grandioso. Foi um momento quieto, simples, completamente comum — e foi exatamente aí que eu soube, com toda a clareza do mundo, o que sentia por você.",
+    "emoji": "♡",
+    "gradient": "linear-gradient(135deg,#2d1b1b,#5a3040)",
+    "url": "./Images/felizesufjf.jpg"
+  },
+  {
+    "date": "Agora",
+    "title": "Aqui, hoje, com você",
+    "text": "Olho pra tudo que vivemos e fico grato. Não pelo resumo, mas pelos detalhes. Pelos dias chatos que ficaram bons porque você estava lá. Pelos risos que só nós dois entendemos. É isso que se constrói junto.",
+    "emoji": "🌟",
+    "gradient": "linear-gradient(135deg,#1e2b1b,#2a4220)",
+    "url": "./Images/viagem.jpg"
+  }
+]

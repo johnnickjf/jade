@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Para Você ♡</title>
+  <meta name="description" content="Um presente feito com amor." />
+
+  <!-- Fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@300;400;500&family=Great+Vibes&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════════════════
+       ELEMENTOS GLOBAIS
+  ══════════════════════════════════════════════════════ -->
+  <div id="scroll-progress" aria-hidden="true"></div>
+  <div id="cursor-dot"  aria-hidden="true"></div>
+  <div id="cursor-ring" aria-hidden="true"></div>
+
+  <!-- ══════════════════════════════════════════════════════
+       LOADER
+  ══════════════════════════════════════════════════════ -->
+  <div id="loader" role="status" aria-label="Carregando">
+    <span class="loader-heart" aria-hidden="true">♡</span>
+    <div class="loader-bar-wrap">
+      <div class="loader-bar"></div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════
+       LOGIN
+  ══════════════════════════════════════════════════════ -->
+  <div id="login-screen" role="main">
+    <canvas id="particles-canvas" aria-hidden="true"></canvas>
+
+    <div class="login-card" id="login-card">
+      <div class="login-ornament" aria-hidden="true">
+        <span class="login-ornament-line"></span>
+        <span class="login-icon">🌹</span>
+        <span class="login-ornament-line"></span>
+      </div>
+
+      <h1 class="login-title">Para você</h1>
+      <p class="login-subtitle">Um lugar só nosso</p>
+
+      <div class="input-wrap">
+        <span class="input-icon" aria-hidden="true">🔑</span>
+        <input
+          type="password"
+          id="password-input"
+          placeholder="nossa senha secreta…"
+          autocomplete="off"
+          maxlength="60"
+          aria-label="Senha"
+        />
+        <button class="input-toggle" id="toggle-pw" type="button" aria-label="Mostrar senha">👁</button>
+      </div>
+
+      <button class="login-btn" id="login-btn" type="button">Entrar ♡</button>
+
+      <div class="login-error" id="login-error" role="alert" aria-live="polite">
+        ✦ Hmm, essa não é a senha certa…
+      </div>
+
+      <p class="login-hint">← dica: o que você sempre me diz ♡</p>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════
+       SITE PRINCIPAL
+  ══════════════════════════════════════════════════════ -->
+  <div id="main-site">
+
+    <!-- ── NAVEGAÇÃO ─────────────────────────────────── -->
+    <nav id="main-nav" aria-label="Navegação principal">
+      <a href="#hero">Início</a>
+      <a href="#mensagem">Mensagem</a>
+      <a href="#galeria">Galeria</a>
+      <a href="#timeline">Momentos</a>
+      <a href="#carta">Carta</a>
+      <a href="#musicas">Músicas</a>
+    </nav>
+
+    <button id="nav-toggle" type="button" aria-label="Abrir menu">☰</button>
+
+    <nav id="nav-drawer" aria-label="Menu mobile">
+      <button id="nav-drawer-close" type="button" aria-label="Fechar menu">✕</button>
+      <a href="#hero">Início</a>
+      <a href="#mensagem">Mensagem</a>
+      <a href="#galeria">Galeria</a>
+      <a href="#timeline">Momentos</a>
+      <a href="#carta">Carta</a>
+      <a href="#musicas">Músicas</a>
+    </nav>
+
+    <!-- ════════════════════════════════════════════════
+         1. HERO
+    ════════════════════════════════════════════════ -->
+    <section id="hero" aria-label="Início">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <canvas id="hero-canvas" aria-hidden="true"></canvas>
+
+      <p class="hero-eyebrow" id="hero-eyebrow">✦ Um presente feito com amor ✦</p>
+
+      <h1 class="hero-title">
+        <span id="hero-title-main">Tudo o que sinto por <em>você</em></span>
+      </h1>
+
+      <p class="hero-sub" id="hero-sub">colocado aqui, com cuidado</p>
+
+      <button
+        class="hero-cta"
+        type="button"
+        onclick="document.getElementById('mensagem').scrollIntoView({ behavior: 'smooth' })"
+      >
+        Explorar <span class="hero-cta-arrow" aria-hidden="true">↓</span>
+      </button>
+
+      <div class="hero-scroll" aria-hidden="true">
+        <div class="hero-scroll-line"></div>
+        <span>rolar</span>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════
+         2. MENSAGEM DINÂMICA
+    ════════════════════════════════════════════════ -->
+    <section id="mensagem" aria-label="Mensagem da semana">
+      <div class="msg-inner reveal">
+        <header class="msg-header">
+          <p class="msg-header-eyebrow">✦ toda semana, uma mensagem nova ✦</p>
+          <h2 class="msg-header-title">Uma mensagem de amor<br><em>por semana</em></h2>
+        </header>
+
+        <span class="msg-quote-mark" aria-hidden="true">&ldquo;</span>
+
+        <blockquote>
+          <p class="msg-text" id="msg-text">…</p>
+        </blockquote>
+
+        <p class="msg-date" id="msg-date"></p>
+        <p class="msg-unlock-hint" id="msg-unlock-hint" aria-live="polite"></p>
+
+        <nav class="msg-nav" aria-label="Navegar entre mensagens">
+          <button class="msg-arrow" id="msg-prev" type="button" aria-label="Anterior">←</button>
+          <div class="msg-dots" id="msg-dots" role="tablist"></div>
+          <button class="msg-arrow" id="msg-next" type="button" aria-label="Próxima">→</button>
+        </nav>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════
+         3. GALERIA
+    ════════════════════════════════════════════════ -->
+    <section id="galeria" aria-label="Galeria">
+      <div class="section-wrap">
+        <header class="reveal">
+          <p class="section-label">Galeria de momentos</p>
+          <h2 class="section-title">Nossas <em>histórias</em><br>em imagens</h2>
+          <div class="section-divider" aria-hidden="true"></div>
+        </header>
+        <div class="gallery-filters reveal" id="gallery-filters" role="group" aria-label="Filtros"></div>
+        <div class="gallery-grid" id="gallery-grid" role="list"></div>
+      </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div id="lightbox" role="dialog" aria-modal="true" aria-label="Foto ampliada">
+      <div class="lightbox-inner">
+        <button class="lightbox-close" id="lightbox-close" type="button" aria-label="Fechar">✕</button>
+        <img id="lightbox-img" src="" alt="" />
+        <div
+          id="lightbox-placeholder"
+          style="display:none;width:100%;height:340px;border-radius:16px;align-items:center;justify-content:center;font-size:5rem;"
+          aria-hidden="true"
+        ></div>
+        <p class="lightbox-desc" id="lightbox-desc"></p>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════
+         4. LINHA DO TEMPO
+    ════════════════════════════════════════════════ -->
+    <section id="timeline" aria-label="Linha do tempo">
+      <div class="section-wrap">
+        <header class="reveal">
+          <p class="section-label">Nossa história</p>
+          <h2 class="section-title">Os momentos que<br><em>me fizeram</em> te amar mais</h2>
+          <div class="section-divider" aria-hidden="true"></div>
+        </header>
+        <div class="timeline-list" id="timeline-list" role="list"></div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════
+         5. CARTA
+    ════════════════════════════════════════════════ -->
+    <section id="carta" aria-label="Uma carta para você">
+      <div class="section-wrap" style="max-width: 820px;">
+        <header class="reveal carta-header">
+          <p class="section-label">Uma carta</p>
+          <h2 class="section-title">O que meu<br>coração <em>quer dizer</em></h2>
+          <div class="section-divider" aria-hidden="true"></div>
+        </header>
+
+        <article class="carta-paper reveal" id="carta-paper">
+          <div class="carta-paragraphs" id="carta-paragraphs"></div>
+          <p class="carta-assinatura" id="carta-assinatura"></p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════
+         6. MÚSICAS
+    ════════════════════════════════════════════════ -->
+    <section id="musicas" aria-label="Trilha sonora">
+      <div class="section-wrap">
+        <header class="reveal">
+          <p class="section-label">Trilha sonora</p>
+          <h2 class="section-title">As músicas que<br><em>nos definem</em></h2>
+          <div class="section-divider" aria-hidden="true"></div>
+        </header>
+        <div class="musicas-grid" id="musicas-grid"></div>
+      </div>
+    </section>
+
+    <!-- YouTube Modal -->
+    <div id="yt-modal" role="dialog" aria-modal="true" aria-label="Player de vídeo">
+      <div class="yt-wrap">
+        <button class="yt-close" id="yt-close" type="button" aria-label="Fechar vídeo">✕</button>
+        <div class="yt-aspect">
+          <iframe id="yt-frame" src="" allow="autoplay; encrypted-media" allowfullscreen title="YouTube"></iframe>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════
+         RODAPÉ
+    ════════════════════════════════════════════════ -->
+    <footer>
+      <div class="footer-rule" aria-hidden="true"></div>
+      <span class="footer-ornament" aria-hidden="true">♡</span>
+      <p class="footer-text" id="footer-text">Feito com amor, atenção e cada detalhe pensado em você</p>
+      <p class="footer-sub"  id="footer-sub">para sempre e mais um dia</p>
+      <div class="footer-rule" aria-hidden="true"></div>
+    </footer>
+
+  </div><!-- /#main-site -->
+
+  <script src="./js/main.js" defer></script>
+</body>
+</html>
