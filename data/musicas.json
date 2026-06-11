@@ -1,50 +1,106 @@
 [
   {
-    "title": "Perfect",
-    "artist": "Ed Sheeran",
-    "tag": "nossa música",
-    "desc": "Toda vez que toca, eu penso em você e sorrio sozinho.",
-    "videoId": "2Vv-BfVoq4g",
-    "thumb": "https://img.youtube.com/vi/2Vv-BfVoq4g/mqdefault.jpg"
-  },
-  {
-    "title": "Die With A Smile",
-    "artist": "Lady Gaga & Bruno Mars",
-    "tag": "pra ouvir junto",
-    "desc": "Essa música tem o nosso jeito. Dramática e linda ao mesmo tempo.",
-    "videoId": "kPa7bsKwL-c",
-    "thumb": "https://img.youtube.com/vi/kPa7bsKwL-c/mqdefault.jpg"
-  },
-  {
-    "title": "Lover",
-    "artist": "Taylor Swift",
+    "title": "The First Time",
+    "artist": "Damiano David",
     "tag": "sentimento",
-    "desc": "Queria ter escrito essa letra. Mas ela capturou tudo que eu sinto.",
-    "videoId": "AzAfcnMm6yQ",
-    "thumb": "https://img.youtube.com/vi/AzAfcnMm6yQ/mqdefault.jpg"
+    "desc": "Cada detalhe do nosso começo, guardado nessa música.",
+    "videoId": "-GyMBnskaFE",
+    "thumb": "https://img.youtube.com/vi/-GyMBnskaFE/mqdefault.jpg"
   },
   {
-    "title": "Bloom",
-    "artist": "The Paper Kites",
-    "tag": "calma",
-    "desc": "Essa música tem o cheiro dos nossos momentos quietos juntos.",
-    "videoId": "PNf7HFnmDlY",
-    "thumb": "https://img.youtube.com/vi/PNf7HFnmDlY/mqdefault.jpg"
+    "title": "Infinity",
+    "artist": "Jaymes Young",
+    "tag": "eterno",
+    "desc": "O tipo de sentimento que não tem fim — exatamente o que sinto por você.",
+    "videoId": "dg9F_gLFcFM",
+    "thumb": "https://img.youtube.com/vi/dg9F_gLFcFM/mqdefault.jpg"
   },
   {
-    "title": "You Are The Best Thing",
-    "artist": "Ray LaMontagne",
-    "tag": "verdade",
-    "desc": "Simples assim: você é a melhor coisa.",
-    "videoId": "iBDsTHkaLkU",
-    "thumb": "https://img.youtube.com/vi/iBDsTHkaLkU/mqdefault.jpg"
+    "title": "Until I Found You",
+    "artist": "Stephen Sanchez",
+    "tag": "descoberta",
+    "desc": "Não sabia o que estava esperando até te encontrar.",
+    "videoId": "GxldQ9eX2wo",
+    "thumb": "https://img.youtube.com/vi/GxldQ9eX2wo/mqdefault.jpg"
   },
   {
-    "title": "Make You Feel My Love",
-    "artist": "Adele",
-    "tag": "promessa",
-    "desc": "Cada verso aqui é uma promessa que faço a você todo dia.",
-    "videoId": "0put0_a--Ng",
-    "thumb": "https://img.youtube.com/vi/0put0_a--Ng/mqdefault.jpg"
+    "title": "Ocean Eyes",
+    "artist": "Billie Eilish",
+    "tag": "encantado",
+    "desc": "Fico assim toda vez que olho pra você: parado no tempo.",
+    "videoId": "viimfQi_pUw",
+    "thumb": "https://img.youtube.com/vi/viimfQi_pUw/mqdefault.jpg"
+  },
+  {
+    "title": "Losing My Religion",
+    "artist": "R.E.M.",
+    "tag": "intensidade",
+    "desc": "Às vezes o que sinto por você me deixa completamente fora de mim.",
+    "videoId": "xwtdhWltSIg",
+    "thumb": "https://img.youtube.com/vi/xwtdhWltSIg/mqdefault.jpg"
+  },
+  {
+    "title": "Lonely Day",
+    "artist": "System of a Down",
+    "tag": "saudade",
+    "desc": "Qualquer dia sem você parece incompleto.",
+    "videoId": "DnGdoEa1tPg",
+    "thumb": "https://img.youtube.com/vi/DnGdoEa1tPg/mqdefault.jpg"
+  },
+  {
+    "title": "Borboleta",
+    "artist": "Melim",
+    "tag": "leveza",
+    "desc": "Com você tudo voa mais leve, mais bonito.",
+    "videoId": "jAowzX2vXQo",
+    "thumb": "https://img.youtube.com/vi/jAowzX2vXQo/mqdefault.jpg"
+  },
+  {
+    "title": "Na Linha do Tempo",
+    "artist": "Victor & Leo",
+    "tag": "pra sempre",
+    "desc": "Nossa história marcada em cada acorde.",
+    "videoId": "DULQudMe7vA",
+    "thumb": "https://img.youtube.com/vi/DULQudMe7vA/mqdefault.jpg"
+  },
+  {
+    "title": "Asas",
+    "artist": "Luan Santana",
+    "tag": "liberdade",
+    "desc": "Com você eu sinto que posso tudo.",
+    "videoId": "Mquk9pHpIoU",
+    "thumb": "https://img.youtube.com/vi/Mquk9pHpIoU/mqdefault.jpg"
+  },
+  {
+    "title": "Sign of the Times",
+    "artist": "Harry Styles",
+    "tag": "momento",
+    "desc": "Cada fase nossa tem esse peso lindo e especial.",
+    "videoId": "qN4ooNx77u0",
+    "thumb": "https://img.youtube.com/vi/qN4ooNx77u0/mqdefault.jpg"
+  },
+  {
+    "title": "My Boo",
+    "artist": "Usher ft. Alicia Keys",
+    "tag": "você",
+    "desc": "Sempre será você — não importa o que aconteça.",
+    "videoId": "fPgf2meEX1w",
+    "thumb": "https://img.youtube.com/vi/fPgf2meEX1w/mqdefault.jpg"
+  },
+  {
+    "title": "Meu Destino",
+    "artist": "Luan Santana",
+    "tag": "destino",
+    "desc": "Não foi sorte — foi você, era você desde o começo.",
+    "videoId": "SduxxTmd0cI",
+    "thumb": "https://img.youtube.com/vi/SduxxTmd0cI/mqdefault.jpg"
+  },
+  {
+    "title": "Nosso Plano",
+    "artist": "Tribo da Periferia",
+    "tag": "futuro",
+    "desc": "A vida que a gente vai construir, esse é o nosso plano.",
+    "videoId": "A2HvRcZlHvg",
+    "thumb": "https://img.youtube.com/vi/A2HvRcZlHvg/mqdefault.jpg"
   }
 ]

@@ -833,19 +833,19 @@ body::after {
   font-style: italic;
   line-height: 1.65;
   color: var(--cream);
-  transition: opacity 0.45s var(--ease), transform 0.45s var(--ease), filter 0.45s var(--ease);
+  transition: opacity 0.3s var(--ease), transform 0.3s var(--ease), filter 0.3s var(--ease);
   min-height: 3em;
 }
 .msg-text.fading {
   opacity: 0;
-  transform: translateY(-14px);
-  filter: blur(5px);
+  transform: translateY(-10px);
+  filter: blur(4px);
 }
 .msg-text.entering {
-  animation: msgIn 0.7s var(--ease-out) both;
+  animation: msgIn 0.5s var(--ease-out) both;
 }
 @keyframes msgIn {
-  from { opacity: 0; transform: translateY(18px); filter: blur(5px); }
+  from { opacity: 0; transform: translateY(14px); filter: blur(4px); }
   to   { opacity: 1; transform: none; filter: none; }
 }
 
@@ -856,7 +856,7 @@ body::after {
   text-transform: uppercase;
   color: var(--gold);
   opacity: 0.6;
-  transition: opacity 0.45s var(--ease);
+  transition: opacity 0.3s var(--ease);
 }
 .msg-date.fading {
   opacity: 0;
@@ -1157,17 +1157,17 @@ body::after {
   max-width: 540px;
 }
 .timeline-visual {
-  margin-top: 1.4rem;
+  margin-top: 1.8rem;
   border-radius: var(--r-md);
   overflow: hidden;
-  max-width: 380px;
+  max-width: 560px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .timeline-placeholder {
   width: 100%;
-  height: 200px;
+  height: 340px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1175,11 +1175,12 @@ body::after {
   border-radius: var(--r-md);
 }
 .timeline-img-real {
-  width: 100%; height: 220px;
+  width: 100%; height: 360px;
   object-fit: cover;
+  object-position: center center;
   transition: transform 0.5s var(--ease);
 }
-.timeline-visual:hover .timeline-img-real { transform: scale(1.04); }
+.timeline-visual:hover .timeline-img-real { transform: scale(1.03); }
 
 /* ── CARTA ────────────────────────────────────────────────────── */
 #carta { background: var(--bg3); }
@@ -1520,6 +1521,22 @@ footer::before {
   margin: 1.8rem auto;
 }
 
+/* ── TOUCH-ACTION — remove atraso de 300ms em interativos ────── */
+.gallery-item,
+.filter-btn,
+.msg-arrow,
+.login-btn,
+.hero-cta,
+.music-play-btn,
+.lightbox-close,
+.yt-close,
+#nav-toggle,
+#nav-drawer-close,
+#nav-drawer a,
+.msg-dot {
+  touch-action: manipulation;
+}
+
 /* ── RESPONSIVE ───────────────────────────────────────────────── */
 @media (max-width: 768px) {
   .section-wrap { padding: 6rem 1.5rem; }
@@ -1529,14 +1546,78 @@ footer::before {
   .musicas-grid { grid-template-columns: 1fr; }
   .carta-paper::after { display: none; }
   .carta-paragraphs { padding-left: 0; }
+  /* Timeline fotos maiores (BLOCO 2) */
+  .timeline-img-real { height: 280px; }
+  .timeline-placeholder { height: 260px; }
+  .timeline-visual { max-width: 100%; }
 }
 @media (max-width: 840px) and (min-width: 641px) {
   #main-nav a { padding: 0.38rem 0.6rem; font-size: 0.62rem; letter-spacing: 0.1em; }
+}
+@media (max-width: 640px) {
+  /* Padding excessivo da seção de mensagens em mobile */
+  .msg-inner { padding: 5rem 1.5rem 4rem; }
+  /* Título da msg-header menor em telas estreitas */
+  .msg-header { margin-bottom: 2rem; }
+  .msg-header-title { font-size: clamp(1.6rem, 6vw, 2.2rem); }
 }
 @media (max-width: 480px) {
   .gallery-grid { columns: 1; }
   .hero-title { font-size: clamp(3rem, 13vw, 5rem); }
   .login-card { padding: 2.5rem 1.8rem 2rem; }
+  /* Drop cap menor em telas muito estreitas */
+  .carta-p:first-of-type::first-letter { font-size: 2.2em; }
+  /* Botão fechar lightbox/YT com mais espaço acima em telas pequenas */
+  .lightbox-close { top: -2.6rem; }
+  .yt-close      { top: -2.6rem; }
+}
+
+/* ── TOUCH DEVICES (hover: none) ──────────────────────────────── */
+@media (hover: none) {
+  /* BUG 1: Remove o scale da <img> dentro de overflow:hidden.
+     No iOS, o hover ativa no primeiro toque, o transform muda o
+     bounding box do elemento e o browser cancela o click pending. */
+  .gallery-item:hover img,
+  .gallery-item:hover .gallery-placeholder {
+    transform: none;
+  }
+
+  /* Overlay sempre legível no toque (cabeçalho da foto visível) */
+  .gallery-overlay {
+    opacity: 1;
+    background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 50%);
+  }
+  .gallery-overlay-tag,
+  .gallery-overlay-desc {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* BUG 2: Tap target mínimo de 44px para as setas de mensagem */
+  .msg-arrow { width: 44px; height: 44px; }
+
+  /* Botões fechar com tap target adequado */
+  .lightbox-close,
+  .yt-close,
+  #nav-drawer-close {
+    min-width: 44px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Botão play das músicas sempre visível (não depende de hover) */
+  .music-play-overlay { opacity: 1; }
+  .music-play-btn     { transform: scale(1); }
+
+  /* Remove efeitos de hover que ficam "presos" após o toque */
+  .gallery-item:hover  { transform: none; box-shadow: none; }
+  .music-card:hover    { transform: none; box-shadow: none; border-color: var(--border); }
+  .music-card:hover::before              { transform: scaleX(0); }
+  .music-card:hover .music-thumb::before { left: -75%; }
+  .music-card:hover .music-thumb img     { transform: none; filter: none; }
+  .filter-btn:hover  { transform: none; }
 }
 
 /* ── REDUCED MOTION ───────────────────────────────────────────── */

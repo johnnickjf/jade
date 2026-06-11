@@ -10,6 +10,30 @@
 const $ = (sel, ctx = document) => ctx.querySelector(sel);
 const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
 
+/**
+ * Trava o scroll da página de forma compatível com iOS Safari.
+ * O pattern `position:fixed + top:-scrollY` evita o scroll-to-top
+ * que o simples `overflow:hidden` causa no iOS.
+ */
+function lockBodyScroll() {
+  const scrollY = window.scrollY;
+  document.body.style.position = 'fixed';
+  document.body.style.top      = `-${scrollY}px`;
+  document.body.style.left     = '0';
+  document.body.style.right    = '0';
+  document.body.style.overflow = 'hidden';
+}
+
+function unlockBodyScroll() {
+  const scrollY = Math.abs(parseInt(document.body.style.top || '0'));
+  document.body.style.position = '';
+  document.body.style.top      = '';
+  document.body.style.left     = '';
+  document.body.style.right    = '';
+  document.body.style.overflow = '';
+  window.scrollTo(0, scrollY);
+}
+
 /** Busca JSON local com tratamento de erro */
 async function fetchJSON(path) {
   try {
@@ -350,26 +374,25 @@ function initMensagem(mensagens) {
     updateHint();
   }
 
-  // Trava durante a transição para cliques rápidos não sobreporem timeouts
-  let animating = false;
+  let fadeT = null, enterT = null;
   function setMsg(i, animate = false) {
-    if (animating && animate) return;
     idx = i;
     if (!animate) { applyMsg(i); return; }
 
-    animating = true;
+    // Cancela qualquer transição em andamento antes de iniciar nova
+    clearTimeout(fadeT);
+    clearTimeout(enterT);
+    textEl.classList.remove('entering');
     textEl.classList.add('fading');
     dateEl.classList.add('fading');
-    setTimeout(() => {
+
+    fadeT = setTimeout(() => {
       applyMsg(i);
       textEl.classList.remove('fading');
       dateEl.classList.remove('fading');
       textEl.classList.add('entering');
-      setTimeout(() => {
-        textEl.classList.remove('entering');
-        animating = false;
-      }, 700);
-    }, 430);
+      enterT = setTimeout(() => textEl.classList.remove('entering'), 500);
+    }, 300);
   }
 
   setMsg(idx);
@@ -466,12 +489,12 @@ function openLightbox(foto) {
 
   desc.textContent = foto.description;
   lb.classList.add('open');
-  document.body.style.overflow = 'hidden';
+  lockBodyScroll();
 }
 
 function closeLightbox() {
   $('#lightbox').classList.remove('open');
-  document.body.style.overflow = '';
+  unlockBodyScroll();
 }
 
 function initLightbox() {
@@ -612,13 +635,13 @@ function initYTModal() {
     const id = btn.dataset.yt;
     frame.src = `https://www.youtube.com/embed/${id}?autoplay=1`;
     modal.classList.add('open');
-    document.body.style.overflow = 'hidden';
+    lockBodyScroll();
   });
 
   function closeModal() {
     modal.classList.remove('open');
     frame.src = '';
-    document.body.style.overflow = '';
+    unlockBodyScroll();
   }
 
   $('#yt-close')?.addEventListener('click', closeModal);
@@ -661,12 +684,12 @@ function initNav() {
 
   toggle?.addEventListener('click', () => {
     drawer.classList.add('open');
-    document.body.style.overflow = 'hidden';
+    lockBodyScroll();
   });
 
   function closeDrawer() {
     drawer.classList.remove('open');
-    document.body.style.overflow = '';
+    unlockBodyScroll();
   }
 
   close?.addEventListener('click', closeDrawer);
