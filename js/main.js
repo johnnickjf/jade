@@ -693,7 +693,15 @@ function initNav() {
   }
 
   close?.addEventListener('click', closeDrawer);
-  $$('#nav-drawer a').forEach(a => a.addEventListener('click', closeDrawer));
+  $$('#nav-drawer a').forEach(a => a.addEventListener('click', e => {
+    e.preventDefault();
+    const href = a.getAttribute('href');
+    closeDrawer();
+    setTimeout(() => {
+      const target = href ? document.querySelector(href) : null;
+      if (target) target.scrollIntoView({ behavior: 'smooth' });
+    }, 320);
+  }));
 }
 
 /* ============================================================

@@ -482,9 +482,13 @@ body::after {
   justify-content: center;
   gap: 0.5rem;
   opacity: 0;
+  pointer-events: none;
   transition: opacity 0.3s;
 }
-#nav-drawer.open { opacity: 1; }
+#nav-drawer.open {
+  opacity: 1;
+  pointer-events: all;
+}
 #nav-drawer a {
   font-family: 'Cormorant Garamond', serif;
   font-size: 2.2rem;
@@ -642,6 +646,7 @@ body::after {
   align-items: center;
   gap: 0.6rem;
   font-size: 0.6rem;
+  pointer-events: none;
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--cream-dim);
